@@ -11,8 +11,8 @@ export default function Home() {
         <HeaderBox 
           type="greeting"
           title="Welcome"
-          user={User?.firstname || 'Guest'}
-          subtext="Acess and manage your account and transactions accourdingly"
+          user={User?.firstname  || 'Guest'}
+          subtext="Access and manage your account and transactions accourdingly"
         /> 
 
         <TotalBalanceBox
