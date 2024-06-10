@@ -22,7 +22,7 @@ const data = {
                 '#2265d8',
                 '#2f91fa',
             ], 
-            borderWidth: 1,
+            borderWidth: 2,
           },
         ],
         labels: ['Bank 1','Bank2','Bank3'],
