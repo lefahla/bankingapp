@@ -1,9 +1,14 @@
 import HeaderBox from "@/components/HeaderBox";
+import RighstSiseBar from "@/components/RighstSiseBar";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
 import Image from "next/image";
 
 export default function Home() {
-  const User = {firstname: 'thabo', lastname: 'nthako'};
+  const loggedIn = {
+      firstName: 'thabo', 
+      lastName: 'nthako',
+      email: 'me@namemiddlewareregex.net'
+    };
   return (
   <section className="home">
     <div className="home-content">
@@ -11,7 +16,7 @@ export default function Home() {
         <HeaderBox 
           type="greeting"
           title="Welcome"
-          user={User?.firstname  || 'Guest'}
+          loggedIn={loggedIn?.firstname  || 'Guest'}
           subtext="Access and manage your account and transactions accourdingly"
         /> 
 
@@ -22,7 +27,15 @@ export default function Home() {
 
         />
       </header>
+      RECENT TRANSATIONS
     </div>
+    <RighstSiseBar 
+      user={loggedIn}
+      transactions={[]}
+      banks={[
+        {currentBalance:190.90},{currentBalance:90.89}
+      ]}
+      />
   </section>  
   );
 }
